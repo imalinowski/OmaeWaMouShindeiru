@@ -2,6 +2,7 @@ package com.example.appchat;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private String debugS = "disconnect";
     private int state = 0;
     private int port = 8000;//9090
-    private String ip = "192.168.0.6"; //35.228.116.93 192.168.0.6 адресс сервера!
+    private String ip = "52.154.69.198"; //192.168.0.6 адресс сервера!
     private MyTimer timer;
     static String myName="";
 
@@ -63,8 +64,20 @@ public class MainActivity extends AppCompatActivity {
 
         messages = new ArrayList<>();
 
-        recyclerView = (RecyclerView) findViewById(R.id.messages_recycler);
-        layoutManager = new LinearLayoutManager(this);
+        recyclerView = findViewById(R.id.messages_recycler);
+        layoutManager = new LinearLayoutManager(this) {
+            @Override
+            public void smoothScrollToPosition(RecyclerView recyclerView, RecyclerView.State state, int position) {
+                LinearSmoothScroller linearSmoothScroller = new LinearSmoothScroller(recyclerView.getContext()) {
+                    @Override
+                    protected int calculateTimeForDeceleration(int dx) {
+                        return super.calculateTimeForDeceleration(dx) * 5;//how slow animation is
+                    }
+                };
+                linearSmoothScroller.setTargetPosition(position);
+                startSmoothScroll(linearSmoothScroller);
+            }
+        };
         layoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
@@ -181,10 +194,12 @@ public class MainActivity extends AppCompatActivity {
         if(state == 2) Toast.makeText(this, "disconnect", Toast.LENGTH_SHORT).show();
         if(state!=0) state = 0;
 
-        if(messages.size() > messageC){
-            adapter.notifyDataSetChanged();
-            layoutManager.smoothScrollToPosition(recyclerView,
-                    new RecyclerView.State(),messages.size()-1);
+        if(messages.size() > messageC && adapter.getItemCount()>0){
+            adapter.notifyItemInserted(adapter.getItemCount());
+            recyclerView.post(()-> {
+                layoutManager.smoothScrollToPosition(
+                        recyclerView,new RecyclerView.State(),adapter.getItemCount()-1);
+            });
             messageC++;
         }
 

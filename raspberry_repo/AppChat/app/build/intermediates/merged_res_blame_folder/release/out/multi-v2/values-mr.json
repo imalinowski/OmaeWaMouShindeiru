@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\ilnic\\AndroidStudioProjects\\AppChat\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-mr\\values-mr.xml",
+            "outputFile": "C:\\Users\\ilnic\\Desktop\\OmaeWaMouShindeiru\\raspberry_repo\\AppChat\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-mr\\values-mr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ilnic\\.gradle\\caches\\transforms-2\\files-2.1\\ff37b710ecf84191a2687617c776753e\\core-1.3.1\\res\\values-mr\\values-mr.xml",

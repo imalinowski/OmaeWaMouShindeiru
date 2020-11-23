@@ -1,10 +1,12 @@
 com/example/appchat/BuildConfig.java
  com.example.appchat.BuildConfig
+com/example/appchat/MainActivity.java
+ com.example.appchat.MainActivity
+ com.example.appchat.MainActivity$1
+ com.example.appchat.MainActivity$1$1
+ com.example.appchat.MainActivity$MyTimer
+com/example/appchat/Message.java
+ com.example.appchat.Message
 com/example/appchat/MessagesAdapter.java
  com.example.appchat.MessagesAdapter
  com.example.appchat.MessagesAdapter$MsgHolder
-com/example/appchat/Message.java
- com.example.appchat.Message
-com/example/appchat/MainActivity.java
- com.example.appchat.MainActivity
- com.example.appchat.MainActivity$MyTimer

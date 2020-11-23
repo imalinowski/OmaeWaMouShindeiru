@@ -1,25 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\ilnic\\AndroidStudioProjects\\AppChat\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\ilnic\\Desktop\\OmaeWaMouShindeiru\\raspberry_repo\\AppChat\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ilnic\\AndroidStudioProjects\\AppChat\\app\\src\\main\\res\\values\\themes.xml",
+                    "source": "C:\\Users\\ilnic\\Desktop\\OmaeWaMouShindeiru\\raspberry_repo\\AppChat\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
-                        "startLines": "2,16",
-                        "startColumns": "4,4",
-                        "startOffsets": "102,838",
-                        "endLines": "14,25",
-                        "endColumns": "12,12",
-                        "endOffsets": "830,1319"
+                        "startLines": "7,2,3,4,5,6,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "293,57,105,153,201,247,336",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "330,99,147,195,241,287,373"
                     },
                     "to": {
-                        "startLines": "3494,4628",
-                        "startColumns": "4,4",
-                        "startOffsets": "228747,304290",
-                        "endLines": "3506,4637",
-                        "endColumns": "12,12",
-                        "endOffsets": "229461,304762"
+                        "startLines": "390,478,479,480,491,492,495",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "18715,24708,24755,24802,25546,25591,25757",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "18752,24750,24797,24844,25586,25631,25794"
                     }
                 },
                 {
@@ -75,6 +73,25 @@
                         "startOffsets": "50829,50869,51358,51540,51595,52632,52686,52738,52787,52848",
                         "endColumns": "39,46,42,54,46,53,51,48,60,49",
                         "endOffsets": "50864,50911,51396,51590,51637,52681,52733,52782,52843,52893"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ilnic\\Desktop\\OmaeWaMouShindeiru\\raspberry_repo\\AppChat\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2,16",
+                        "startColumns": "4,4",
+                        "startOffsets": "102,838",
+                        "endLines": "14,25",
+                        "endColumns": "12,12",
+                        "endOffsets": "830,1319"
+                    },
+                    "to": {
+                        "startLines": "3494,4628",
+                        "startColumns": "4,4",
+                        "startOffsets": "228747,304290",
+                        "endLines": "3506,4637",
+                        "endColumns": "12,12",
+                        "endOffsets": "229461,304762"
                     }
                 },
                 {
@@ -135,7 +152,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ilnic\\AndroidStudioProjects\\AppChat\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\ilnic\\Desktop\\OmaeWaMouShindeiru\\raspberry_repo\\AppChat\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -225,23 +242,6 @@
                         "endLines": "300,635,636,637,645,646,647,882,6780",
                         "endColumns": "55,58,47,55,74,75,71,65,24",
                         "endOffsets": "14071,35118,35166,35222,35908,35984,36056,51011,441518"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ilnic\\AndroidStudioProjects\\AppChat\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "7,2,3,4,5,6,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "293,57,105,153,201,247,336",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "330,99,147,195,241,287,373"
-                    },
-                    "to": {
-                        "startLines": "390,478,479,480,491,492,495",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "18715,24708,24755,24802,25546,25591,25757",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "18752,24750,24797,24844,25586,25631,25794"
                     }
                 }
             ]
