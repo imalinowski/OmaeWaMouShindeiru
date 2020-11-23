@@ -9,7 +9,7 @@ list_of_clients = []
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server.bind(('', 8000))
-server.listen(10000000)
+server.listen(214748364)
 token = "3ce965ac7f9328"
 
 
@@ -76,19 +76,19 @@ def broadcast_meeting(username, connection):
         {'hour': time.localtime().tm_hour + 3, 'minute': time.localtime().tm_min, 'nick': 'server',
          'message': username + ' join us'})
     for clients in list_of_clients:
-        # if clients != connection:
-        clients.send(bytes(notification, encoding='utf8'))
+        if clients != connection:
+            clients.send(bytes(notification, encoding='utf8'))
 
 
 def broadcast(message, connection):
     for clients in list_of_clients:
-        # if clients != connection:
-        try:
-            clients.send(bytes(message, encoding='utf8'))
-        except:
-            print(connection + " remove")
-            clients.close()
-            remove(clients)
+        if clients != connection:
+            try:
+                clients.send(bytes(message, encoding='utf8'))
+            except:
+                print(connection + " remove")
+                clients.close()
+                remove(clients)
 
 
 try:
